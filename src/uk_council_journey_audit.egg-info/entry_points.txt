@@ -1,0 +1,2 @@
+[console_scripts]
+council-audit = uk_council_journey_audit.cli:main

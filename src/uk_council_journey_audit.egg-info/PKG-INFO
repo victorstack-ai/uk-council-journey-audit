@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: uk-council-journey-audit
+Version: 0.1.0
+Summary: A tool to audit UK council website user journeys based on David Bishop's Council Insight methodology.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.0
+Requires-Dist: playwright>=1.40.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: pydantic>=2.0.0
+
+# UK Council Journey Audit Tool
+
+This tool is inspired by **David Bishop's Council Insight** methodology, which rethinks how UK council websites are evaluated by focusing on **user journeys** and **customer needs** rather than just technical metrics.
+
+## Inspiration
+David Bishop, founder of Digital Journey Coach, developed Council Insight to analyze how users interact with local authority websites. This tool aims to provide a lightweight, automated way to audit common user journeys across UK council websites.
+
+## Features
+- **Journey-based Auditing**: Define and run automated checks for common council tasks (e.g., reporting a missed bin, finding council tax info).
+- **Findability Analysis**: Measures how many clicks/interactions it takes to reach a goal.
+- **Rich Reporting**: Generates a summary of the journey's health.
+
+## Installation
+```bash
+pip install .
+playwright install chromium
+```
+
+## Usage
+```bash
+council-audit --url https://www.oxford.gov.uk --journey missed-bin
+```
+
+## Disclaimer
+This is a demonstration tool and not an official Council Insight product.

@@ -1,0 +1,23 @@
+[project]
+name = "uk-council-journey-audit"
+version = "0.1.0"
+description = "A tool to audit UK council website user journeys based on David Bishop's Council Insight methodology."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1.0",
+    "playwright>=1.40.0",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.scripts]
+council-audit = "uk_council_journey_audit.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
